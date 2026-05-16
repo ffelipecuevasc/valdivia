@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Valdivia - La Perla del Sur</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#3c2d2a",
+                        "primary-fixed": "#ffdad4",
+                        "surface-tint": "#ae3022",
+                        "error": "#ba1a1a",
+                        "outline": "#8d706c",
+                        "on-primary-fixed": "#410000",
+                        "surface": "#fff8f6",
+                        "tertiary-container": "#001da8",
+                        "tertiary": "#00106f",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed": "#000c61",
+                        "on-tertiary-container": "#8997ff",
+                        "primary": "#4b0000",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "tertiary-fixed-dim": "#bcc2ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#ffedea",
+                        "inverse-primary": "#ffb4a8",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "background": "#fff8f6",
+                        "surface-container": "#ffe9e6",
+                        "surface-container-highest": "#f6ddd9",
+                        "on-tertiary-fixed-variant": "#2034b7",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#616363",
+                        "on-surface": "#251816",
+                        "surface-variant": "#f6ddd9",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-primary-fixed-variant": "#8d160d",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#e1bfb9",
+                        "secondary": "#5d5f5f",
+                        "on-primary-container": "#ff7461",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#edd5d1",
+                        "tertiary-fixed": "#dfe0ff",
+                        "secondary-container": "#dfe0e0",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#fff0ee",
+                        "on-surface-variant": "#59413d",
+                        "primary-container": "#740000",
+                        "surface-container-high": "#fce3df",
+                        "surface-bright": "#fff8f6",
+                        "on-background": "#251816"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Bodoni Moda"],
+                        "label-sm": ["Manrope"],
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "display-lg": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface/90 dark:bg-inverse-surface/90 fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline backdrop-blur-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-primary-fixed">
+                VALDIVIA
+            </div>
+<nav class="hidden md:flex gap-8 items-center font-label-sm text-label-sm tracking-widest">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 cursor-pointer transition-transform active:scale-95" href="#">EXPEDITIONS</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 cursor-pointer transition-transform active:scale-95" href="#">CULTURE</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 cursor-pointer transition-transform active:scale-95" href="#">GASTRONOMY</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 cursor-pointer transition-transform active:scale-95" href="#">GALLERY</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold py-3 px-6 rounded-none tracking-widest hover:bg-primary-container transition-colors duration-300 hidden md:block">
+                BOOK STAY
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden mt-[88px] md:mt-[104px]">
+<div class="absolute inset-0 z-0">
+<img alt="Panoramic high-quality professional photography of Valdivia, Chile at sunset. The Calle-Calle river reflecting the golden light, the city bridge in the background, lush green forests surrounding the urban area." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqdYJ9hrmxmvwo5y9OmmZ2dvFYzTlt7-BVKeoI-zooIkQKUJvF3k7_gnSM_H5TrK5DDWndj2MnE7UPyk0LaNZuHE5HI-vbf05AwpWQUDsDp4eHM5QcmYQOgCaRMqM55Bt8Oseg4fEpYI1brVtaDzO08gEmveUqpuS36IO2BLnjntv-_Ka6lnLHCOO4a5Db3RxTjqoKvGo1zDt2SwkgSjyJtdNpd2tW35Wy7sZgZ8ZXduHVDnId2Qf6wl5kPKYWqct_dvVDnoe9tfQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-on-primary">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg mb-6 drop-shadow-lg">
+                La Perla del Sur
+            </h1>
+<p class="font-body-lg text-body-lg md:text-2xl max-w-2xl mx-auto drop-shadow-md border-b-2 border-primary-fixed pb-4 inline-block">
+                ¿Qué hacer en Valdivia?
+            </p>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+<span class="material-symbols-outlined text-on-primary text-4xl opacity-80">expand_more</span>
+</div>
+</section>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Intro Text -->
+<div class="max-w-3xl mx-auto text-center mb-section-gap">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Descubre la Magia del Sur de Chile</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Valdivia es una ciudad donde la historia colonial se entrelaza con una naturaleza exuberante. Sus ríos navegables, rodeados de densos bosques milenarios, ofrecen un escenario único para viajeros que buscan autenticidad, cultura y una gastronomía inigualable.
+            </p>
+</div>
+<!-- Editorial Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Attraction 1: Selva Valdiviana -->
+<article class="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap items-center">
+<div class="md:col-span-7 order-2 md:order-1 relative p-6 bg-white border border-outline-variant">
+<div class="absolute -top-4 -left-4 bg-primary text-on-primary font-label-sm text-label-sm px-4 py-2 uppercase tracking-widest border border-outline-variant z-10">
+                        Naturaleza
+                    </div>
+<img alt="Beautiful shot of the Valdivian temperate rainforest, misty atmosphere, lush green ancient trees, ferns, and deep vegetation." class="w-full h-auto object-cover border border-outline-variant p-[24px] bg-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJRY2JYiI7GUaoHzUCtBycLIzY2jCexdaCtgLSOQS5yXwZEKKFEAE7TGXYUV-MMQMExLxUN1QUSM-TcQfB5xfAus24FvhI7uJLCbHJNa2T67XnQUzQ78wrPMEd1HuT_F6MNTI9lOMgcEDH2OWruFiMYb2FqqOWYwB-C2YfM4Z2mOnpc7nCMf9CBC-bfbm8UsVz7afqr1ykbv9kJ39usshlTXVIol337j7c9yMxEiBmJmOrlI_R4cTHx8gZPL3mBOgNu4KXyVycJdY"/>
+</div>
+<div class="md:col-span-5 order-1 md:order-2 space-y-6">
+<h3 class="font-headline-md text-headline-md text-primary">Selva Valdiviana</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Adéntrate en uno de los ecosistemas más antiguos del planeta. La Selva Valdiviana es un bosque templado lluvioso, un refugio de biodiversidad endémica donde helechos gigantes y alerces milenarios crean una atmósfera mística bajo la suave lluvia del sur.
+                    </p>
+<button class="bg-transparent text-primary font-label-sm text-label-sm uppercase font-bold py-3 px-6 border border-primary tracking-widest hover:bg-surface-variant transition-colors duration-300">
+                        Explorar Rutas
+                    </button>
+</div>
+</article>
+<!-- Attraction 2: Mercado Fluvial -->
+<article class="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap items-center">
+<div class="md:col-span-5 space-y-6">
+<div class="inline-block border border-outline px-3 py-1 font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">
+                        Cultura &amp; Sabor
+                    </div>
+<h3 class="font-headline-md text-headline-md text-primary">Mercado Fluvial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        El corazón vibrante de la ciudad palpita a orillas del río. Aquí, los pescadores locales ofrecen los frutos del mar más frescos mientras los icónicos lobos marinos aguardan su oportunidad. Una experiencia sensorial llena de color, bullicio y tradición viva.
+                    </p>
+<button class="bg-transparent text-primary font-label-sm text-label-sm uppercase font-bold py-3 px-6 border border-primary tracking-widest hover:bg-surface-variant transition-colors duration-300">
+                        Ver Experiencias
+                    </button>
+</div>
+<div class="md:col-span-7 relative p-6 bg-white border border-outline-variant">
+<img alt="Close-up professional photo of the Valdivia Fish Market (Mercado Fluvial), featuring sea lions and local architecture by the river." class="w-full h-auto object-cover border border-outline-variant p-[24px] bg-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVQ89Fm8e1sh5pCtuFyVllZKu_19Qshcqm6mkGknAZdOACGQnE_6B6S5kNouz18eUcefObqVHghupJZzSlK7GTEuGr_Q130W5oQUg4ZRfnOdq9vbTw3nenXQOQLFVJikUNAyBK-i00KP-ftoFZpJ3fwh3FlJlXUSsyxT75-kR-WbgJm4sh09Qv5bgaoNyfQ-nDyFewkn0AsRc4KQxOuLsILVHeA4_oTfsHUKBjjadLxHtF43G0wZQo_hHJbHjZtG-UT7qkip5eE_g"/>
+</div>
+</article>
+<!-- Attraction 3: Fortificaciones de Niebla -->
+<article class="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-8 order-2 md:order-1 relative p-6 bg-white border border-outline-variant">
+<div class="absolute -top-4 -left-4 bg-primary text-on-primary font-label-sm text-label-sm px-4 py-2 uppercase tracking-widest border border-outline-variant z-10">
+                        Patrimonio
+                    </div>
+<img alt="Historic Spanish fortification at Niebla, Valdivia. Old stone walls overlooking the Pacific Ocean, clear sky, historic atmosphere." class="w-full h-auto object-cover border border-outline-variant p-[24px] bg-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQSQzLugLKppnvYxp3A7ii-KXXjdIjzAsZmwqJdG8_u1KegMnGUE0lts7dLyAxZjG4etIc81AtNKdPFIOnP3zygyI3is4hOhBFu8YMpyVIYUh0u-uRxvO-JaytIqj9ZuLiZYZTa4ZIyeXMNSYx5yTdTaQQPUw7dBVtFD99Dv2kn8URsc9PW9JBi_UPspdgQnj_3JyLUTeFDSyDc9lx8KfeGIwA3T0v3mrGm4FE_OSki6TEz0g0KeRjd4x3aKDizAn_laYSuwUC8qo"/>
+</div>
+<div class="md:col-span-4 order-1 md:order-2 space-y-6">
+<h3 class="font-headline-md text-headline-md text-primary">Fortificaciones de Niebla</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        En la costa, donde el río Calle-Calle abraza el Océano Pacífico, se erigen imponentes los antiguos fuertes españoles. Testigos silenciosos de la historia colonial, ofrecen vistas panorámicas inigualables y un viaje al pasado defensivo de la región.
+                    </p>
+<button class="bg-transparent text-primary font-label-sm text-label-sm uppercase font-bold py-3 px-6 border border-primary tracking-widest hover:bg-surface-variant transition-colors duration-300">
+                        Descubrir Historia
+                    </button>
+</div>
+</article>
+</div>
+<!-- Call to Action Banner -->
+<div class="mt-section-gap bg-surface-variant border border-outline-variant p-12 text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Su Viaje Comienza Aquí</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8">
+                Reserve su estadía y permítanos diseñar una experiencia a medida, combinando el lujo silencioso con la majestuosidad indómita del sur chileno.
+            </p>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold py-4 px-10 rounded-none tracking-widest hover:bg-primary-container transition-colors duration-300 inline-flex items-center gap-2">
+<span>PLANIFICAR VIAJE</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-inverse-surface border-t border-outline-variant dark:border-outline w-full py-section-gap mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed font-bold">
+                VALDIVIA
+            </div>
+<nav class="flex flex-wrap justify-center gap-6 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-200" href="#">Privacy</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-200" href="#">Terms</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-200" href="#">Contact</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-200" href="#">Press</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant text-center md:text-right">
+                © 2024 Valdivia Monograph. Editorial Travel Chile.
+            </div>
+</div>
+</footer>
+</body></html>
