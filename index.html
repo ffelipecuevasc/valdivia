@@ -1,245 +1,468 @@
 <!DOCTYPE html>
-
-<html class="light" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Valdivia - La Perla del Sur</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "inverse-surface": "#3c2d2a",
-                        "primary-fixed": "#ffdad4",
-                        "surface-tint": "#ae3022",
-                        "error": "#ba1a1a",
-                        "outline": "#8d706c",
-                        "on-primary-fixed": "#410000",
-                        "surface": "#fff8f6",
-                        "tertiary-container": "#001da8",
-                        "tertiary": "#00106f",
-                        "on-primary": "#ffffff",
-                        "secondary-fixed": "#e2e2e2",
-                        "on-tertiary-fixed": "#000c61",
-                        "on-tertiary-container": "#8997ff",
-                        "primary": "#4b0000",
-                        "secondary-fixed-dim": "#c6c6c7",
-                        "tertiary-fixed-dim": "#bcc2ff",
-                        "on-tertiary": "#ffffff",
-                        "inverse-on-surface": "#ffedea",
-                        "inverse-primary": "#ffb4a8",
-                        "on-secondary-fixed": "#1a1c1c",
-                        "background": "#fff8f6",
-                        "surface-container": "#ffe9e6",
-                        "surface-container-highest": "#f6ddd9",
-                        "on-tertiary-fixed-variant": "#2034b7",
-                        "error-container": "#ffdad6",
-                        "on-secondary-container": "#616363",
-                        "on-surface": "#251816",
-                        "surface-variant": "#f6ddd9",
-                        "on-secondary-fixed-variant": "#454747",
-                        "on-primary-fixed-variant": "#8d160d",
-                        "on-secondary": "#ffffff",
-                        "outline-variant": "#e1bfb9",
-                        "secondary": "#5d5f5f",
-                        "on-primary-container": "#ff7461",
-                        "primary-fixed-dim": "#ffb4a8",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-dim": "#edd5d1",
-                        "tertiary-fixed": "#dfe0ff",
-                        "secondary-container": "#dfe0e0",
-                        "on-error": "#ffffff",
-                        "on-error-container": "#93000a",
-                        "surface-container-low": "#fff0ee",
-                        "on-surface-variant": "#59413d",
-                        "primary-container": "#740000",
-                        "surface-container-high": "#fce3df",
-                        "surface-bright": "#fff8f6",
-                        "on-background": "#251816"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-desktop": "64px",
-                        "container-max": "1280px",
-                        "unit": "8px",
-                        "gutter": "32px",
-                        "margin-mobile": "20px",
-                        "section-gap": "120px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Bodoni Moda"],
-                        "label-sm": ["Manrope"],
-                        "headline-md": ["Bodoni Moda"],
-                        "headline-lg": ["Bodoni Moda"],
-                        "body-lg": ["Manrope"],
-                        "body-md": ["Manrope"],
-                        "display-lg": ["Bodoni Moda"]
-                    },
-                    "fontSize": {
-                        "display-lg-mobile": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
-                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
-                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "display-lg": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined.fill {
-            font-variation-settings: 'FILL' 1;
-        }
-    </style>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valdivia — La Perla del Sur</title>
+    <link rel="stylesheet" href="./static/css/output.css" type="text/css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
-<body class="bg-surface text-on-surface antialiased overflow-x-hidden min-h-screen flex flex-col">
-<!-- TopNavBar -->
-<header class="bg-surface/90 dark:bg-inverse-surface/90 fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline backdrop-blur-sm">
-<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
-<div class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-primary-fixed">
-                VALDIVIA
-            </div>
-<nav class="hidden md:flex gap-8 items-center font-label-sm text-label-sm tracking-widest">
-<a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 cursor-pointer transition-transform active:scale-95" href="#">EXPEDITIONS</a>
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 cursor-pointer transition-transform active:scale-95" href="#">CULTURE</a>
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 cursor-pointer transition-transform active:scale-95" href="#">GASTRONOMY</a>
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 cursor-pointer transition-transform active:scale-95" href="#">GALLERY</a>
+
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════════ -->
+<nav id="navbar">
+    <div class="nav-top">
+        <!-- Col 1 izquierda: Theme toggle -->
+        <button id="themeBtn" onclick="toggleTheme()" aria-label="Cambiar tema">
+            <span id="themeIcon">☀</span>
+            <span id="themeLabel">Modo Claro</span>
+        </button>
+        <!-- Col 2 centro: Logo -->
+        <a href="#" class="nav-logo">Valdivia</a>
+        <!-- Col 3 derecha: Bandera SVG de Valdivia -->
+        <div class="nav-flag" title="Escudo de Valdivia">
+            <!-- Bandera / Escudo heráldico de Valdivia -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 64" role="img" aria-label="Bandera de Valdivia">
+                <!-- Escudo con forma clásica -->
+                <defs>
+                    <clipPath id="shield-clip">
+                        <path d="M2,2 H52 V40 Q52,62 27,62 Q2,62 2,40 Z"/>
+                    </clipPath>
+                    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#f5d060"/>
+                        <stop offset="100%" stop-color="#c8922a"/>
+                    </linearGradient>
+                    <linearGradient id="blueGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#1a4a8a"/>
+                        <stop offset="100%" stop-color="#0e2f5e"/>
+                    </linearGradient>
+                </defs>
+                <!-- Borde dorado del escudo -->
+                <path d="M27,63 Q1,63 1,40 V1 H53 V40 Q53,63 27,63 Z" fill="url(#goldGrad)"/>
+                <!-- Cuerpo del escudo — mitad superior azul / mitad inferior roja -->
+                <g clip-path="url(#shield-clip)">
+                    <!-- Fondo azul superior -->
+                    <rect x="2" y="2" width="50" height="32" fill="url(#blueGrad)"/>
+                    <!-- Fondo rojo inferior -->
+                    <rect x="2" y="34" width="50" height="30" fill="#c0180e"/>
+                    <!-- Línea divisoria dorada -->
+                    <rect x="2" y="33" width="50" height="2" fill="#f5d060"/>
+                    <!-- Torre / Castillo central (símbolo de Valdivia) -->
+                    <rect x="21" y="7"  width="12" height="10" fill="#f5d060"/>
+                    <rect x="19" y="14" width="16" height="12" fill="#f5d060"/>
+                    <!-- Ventanas torre -->
+                    <rect x="24" y="9"  width="3" height="3" fill="#0e2f5e"/>
+                    <rect x="29" y="9"  width="3" height="3" fill="#0e2f5e"/>
+                    <rect x="23" y="16" width="4" height="5" fill="#0e2f5e"/>
+                    <rect x="30" y="16" width="4" height="5" fill="#0e2f5e"/>
+                    <!-- Almenas -->
+                    <rect x="19" y="5"  width="3" height="4" fill="#f5d060"/>
+                    <rect x="23" y="5"  width="3" height="4" fill="#f5d060"/>
+                    <rect x="27" y="5"  width="3" height="4" fill="#f5d060"/>
+                    <rect x="31" y="5"  width="3" height="4" fill="#f5d060"/>
+                    <!-- Olas del río (zona roja inferior) -->
+                    <path d="M5,42 Q10,38 15,42 Q20,46 25,42 Q30,38 35,42 Q40,46 45,42 Q48,40 50,42" stroke="#f5d060" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    <path d="M5,48 Q10,44 15,48 Q20,52 25,48 Q30,44 35,48 Q40,52 45,48 Q48,46 50,48" stroke="#f5d060" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    <!-- Estrella de 5 puntas (símbolo regional) -->
+                    <polygon points="27,56 28.5,61 33,61 29.5,63.5 31,68 27,65.5 23,68 24.5,63.5 21,61 25.5,61" fill="#f5d060" transform="translate(0,-12) scale(0.7) translate(11.6,17)"/>
+                </g>
+                <!-- Borde exterior del escudo -->
+                <path d="M27,63 Q1,63 1,40 V1 H53 V40 Q53,63 27,63 Z" fill="none" stroke="#f5d060" stroke-width="1.5"/>
+            </svg>
+        </div>
+    </div>
+    <nav class="nav-links">
+        <a href="#intro"   class="nav-link">Inicio</a>
+        <a href="#lugares" class="nav-link">Turismo</a>
+        <a href="#gallery" class="nav-link">Galería</a>
+        <a href="#info"    class="nav-link">Cultura</a>
+        <a href="#cta-band"class="nav-link">Gastronomía</a>
+        <a href="#footer"  class="nav-link">Contacto</a>
+    </nav>
 </nav>
-<button class="bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold py-3 px-6 rounded-none tracking-widest hover:bg-primary-container transition-colors duration-300 hidden md:block">
-                BOOK STAY
-            </button>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-</header>
-<!-- Hero Section -->
-<section class="relative h-screen w-full flex items-center justify-center overflow-hidden mt-[88px] md:mt-[104px]">
-<div class="absolute inset-0 z-0">
-<img alt="Panoramic high-quality professional photography of Valdivia, Chile at sunset. The Calle-Calle river reflecting the golden light, the city bridge in the background, lush green forests surrounding the urban area." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqdYJ9hrmxmvwo5y9OmmZ2dvFYzTlt7-BVKeoI-zooIkQKUJvF3k7_gnSM_H5TrK5DDWndj2MnE7UPyk0LaNZuHE5HI-vbf05AwpWQUDsDp4eHM5QcmYQOgCaRMqM55Bt8Oseg4fEpYI1brVtaDzO08gEmveUqpuS36IO2BLnjntv-_Ka6lnLHCOO4a5Db3RxTjqoKvGo1zDt2SwkgSjyJtdNpd2tW35Wy7sZgZ8ZXduHVDnId2Qf6wl5kPKYWqct_dvVDnoe9tfQ"/>
-<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/40 to-transparent"></div>
-</div>
-<div class="relative z-10 text-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-on-primary">
-<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg mb-6 drop-shadow-lg">
-                La Perla del Sur
-            </h1>
-<p class="font-body-lg text-body-lg md:text-2xl max-w-2xl mx-auto drop-shadow-md border-b-2 border-primary-fixed pb-4 inline-block">
-                ¿Qué hacer en Valdivia?
-            </p>
-</div>
-<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-<span class="material-symbols-outlined text-on-primary text-4xl opacity-80">expand_more</span>
-</div>
+
+<!-- ══════════════════ HERO ════════════════════════ -->
+<section id="hero">
+    <img
+            id="hero-img"
+            src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=85&fit=crop"
+            alt="Vista aérea de Valdivia, Chile"
+            loading="eager"
+    />
+    <div class="hero-content">
+        <span class="hero-eyebrow">Región de Los Ríos · Chile</span>
+        <h1 class="hero-title">La <span>Perla</span> del Sur</h1>
+        <p class="hero-slogan">Valdivia</p>
+        <div class="hero-divider"></div>
+        <p class="hero-subtitle">
+            Donde los ríos abrazan la historia, la naturaleza susurra entre los bosques
+            y la cultura florecía desde los confines del mundo.
+        </p>
+        <div class="hero-cta">
+            <a href="#lugares" class="btn-primary">Explorar Ciudad</a>
+            <a href="#gallery" class="btn-outline">Ver Galería</a>
+        </div>
+    </div>
+    <div class="scroll-hint">
+        <span>Descubrir</span>
+        <div class="scroll-arrow"></div>
+    </div>
 </section>
-<!-- Main Content -->
-<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
-<!-- Intro Text -->
-<div class="max-w-3xl mx-auto text-center mb-section-gap">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Descubre la Magia del Sur de Chile</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-                Valdivia es una ciudad donde la historia colonial se entrelaza con una naturaleza exuberante. Sus ríos navegables, rodeados de densos bosques milenarios, ofrecen un escenario único para viajeros que buscan autenticidad, cultura y una gastronomía inigualable.
+
+<!-- ══════════════════ INTRO ═══════════════════════ -->
+<section id="intro">
+    <div class="intro-inner">
+        <span class="section-label reveal">Una Ciudad Única</span>
+        <p class="intro-quote reveal reveal-delay-1">
+            "Una ciudad donde el tiempo fluye tan sereno como sus ríos,
+            guardando siglos de historia entre sus calles empedradas."
+        </p>
+        <div class="red-line reveal reveal-delay-2"></div>
+        <p style="font-size:.95rem;line-height:1.85;font-weight:300;max-width:640px;margin:0 auto" class="reveal reveal-delay-3 section-body">
+            Valdivia, fundada en 1552 por Pedro de Valdivia en el corazón de la Región de Los Ríos,
+            es una de las ciudades más bellas y singulares de Chile. Rodeada por los ríos Calle-Calle,
+            Cruces y Valdivia, su herencia alemana, su arquitectura centenaria y su exuberante naturaleza
+            la convierten en un destino absolutamente irresistible.
+        </p>
+    </div>
+</section>
+
+<!-- ══════════════════ STATS ═══════════════════════ -->
+<section id="stats">
+    <div class="stat-item reveal">
+        <div class="stat-num">1552</div>
+        <div class="stat-label">Año de Fundación</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num">174K</div>
+        <div class="stat-label">Habitantes</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Ríos que la abrazan</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Sitios Patrimoniales</div>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.48s">
+        <div class="stat-num">472</div>
+        <div class="stat-label">Años de Historia</div>
+    </div>
+</section>
+
+<!-- ══════════════════ LUGARES ═════════════════════ -->
+<div id="lugares">
+
+    <!-- Lugar 01 -->
+    <div class="place-strip">
+        <div class="place-img-wrap">
+            <span class="place-number">01</span>
+            <img
+                    class="place-img"
+                    src="https://images.unsplash.com/photo-1519643381401-22c77e60520e?w=900&q=80&fit=crop"
+                    alt="Mercado Fluvial de Valdivia"
+            />
+        </div>
+        <div class="place-content">
+            <span class="place-tag reveal">Patrimonio · Gastronomía</span>
+            <h2 class="place-title reveal reveal-delay-1">Mercado Fluvial</h2>
+            <p class="place-desc reveal reveal-delay-2">
+                El corazón vivo de Valdivia. Aquí los pescadores ofrecen sus capturas
+                a orillas del río mientras los famosos lobos marinos compiten por su parte.
+                Un espectáculo único de naturaleza y tradición que se repite cada mañana
+                desde hace generaciones. Mariscos frescos, salmón ahumado y el inconfundible
+                olor a río llenan este rincón mágico.
             </p>
-</div>
-<!-- Editorial Grid Layout -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Attraction 1: Selva Valdiviana -->
-<article class="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap items-center">
-<div class="md:col-span-7 order-2 md:order-1 relative p-6 bg-white border border-outline-variant">
-<div class="absolute -top-4 -left-4 bg-primary text-on-primary font-label-sm text-label-sm px-4 py-2 uppercase tracking-widest border border-outline-variant z-10">
-                        Naturaleza
-                    </div>
-<img alt="Beautiful shot of the Valdivian temperate rainforest, misty atmosphere, lush green ancient trees, ferns, and deep vegetation." class="w-full h-auto object-cover border border-outline-variant p-[24px] bg-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJRY2JYiI7GUaoHzUCtBycLIzY2jCexdaCtgLSOQS5yXwZEKKFEAE7TGXYUV-MMQMExLxUN1QUSM-TcQfB5xfAus24FvhI7uJLCbHJNa2T67XnQUzQ78wrPMEd1HuT_F6MNTI9lOMgcEDH2OWruFiMYb2FqqOWYwB-C2YfM4Z2mOnpc7nCMf9CBC-bfbm8UsVz7afqr1ykbv9kJ39usshlTXVIol337j7c9yMxEiBmJmOrlI_R4cTHx8gZPL3mBOgNu4KXyVycJdY"/>
-</div>
-<div class="md:col-span-5 order-1 md:order-2 space-y-6">
-<h3 class="font-headline-md text-headline-md text-primary">Selva Valdiviana</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                        Adéntrate en uno de los ecosistemas más antiguos del planeta. La Selva Valdiviana es un bosque templado lluvioso, un refugio de biodiversidad endémica donde helechos gigantes y alerces milenarios crean una atmósfera mística bajo la suave lluvia del sur.
-                    </p>
-<button class="bg-transparent text-primary font-label-sm text-label-sm uppercase font-bold py-3 px-6 border border-primary tracking-widest hover:bg-surface-variant transition-colors duration-300">
-                        Explorar Rutas
-                    </button>
-</div>
-</article>
-<!-- Attraction 2: Mercado Fluvial -->
-<article class="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap items-center">
-<div class="md:col-span-5 space-y-6">
-<div class="inline-block border border-outline px-3 py-1 font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">
-                        Cultura &amp; Sabor
-                    </div>
-<h3 class="font-headline-md text-headline-md text-primary">Mercado Fluvial</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                        El corazón vibrante de la ciudad palpita a orillas del río. Aquí, los pescadores locales ofrecen los frutos del mar más frescos mientras los icónicos lobos marinos aguardan su oportunidad. Una experiencia sensorial llena de color, bullicio y tradición viva.
-                    </p>
-<button class="bg-transparent text-primary font-label-sm text-label-sm uppercase font-bold py-3 px-6 border border-primary tracking-widest hover:bg-surface-variant transition-colors duration-300">
-                        Ver Experiencias
-                    </button>
-</div>
-<div class="md:col-span-7 relative p-6 bg-white border border-outline-variant">
-<img alt="Close-up professional photo of the Valdivia Fish Market (Mercado Fluvial), featuring sea lions and local architecture by the river." class="w-full h-auto object-cover border border-outline-variant p-[24px] bg-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVQ89Fm8e1sh5pCtuFyVllZKu_19Qshcqm6mkGknAZdOACGQnE_6B6S5kNouz18eUcefObqVHghupJZzSlK7GTEuGr_Q130W5oQUg4ZRfnOdq9vbTw3nenXQOQLFVJikUNAyBK-i00KP-ftoFZpJ3fwh3FlJlXUSsyxT75-kR-WbgJm4sh09Qv5bgaoNyfQ-nDyFewkn0AsRc4KQxOuLsILVHeA4_oTfsHUKBjjadLxHtF43G0wZQo_hHJbHjZtG-UT7qkip5eE_g"/>
-</div>
-</article>
-<!-- Attraction 3: Fortificaciones de Niebla -->
-<article class="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-<div class="md:col-span-8 order-2 md:order-1 relative p-6 bg-white border border-outline-variant">
-<div class="absolute -top-4 -left-4 bg-primary text-on-primary font-label-sm text-label-sm px-4 py-2 uppercase tracking-widest border border-outline-variant z-10">
-                        Patrimonio
-                    </div>
-<img alt="Historic Spanish fortification at Niebla, Valdivia. Old stone walls overlooking the Pacific Ocean, clear sky, historic atmosphere." class="w-full h-auto object-cover border border-outline-variant p-[24px] bg-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQSQzLugLKppnvYxp3A7ii-KXXjdIjzAsZmwqJdG8_u1KegMnGUE0lts7dLyAxZjG4etIc81AtNKdPFIOnP3zygyI3is4hOhBFu8YMpyVIYUh0u-uRxvO-JaytIqj9ZuLiZYZTa4ZIyeXMNSYx5yTdTaQQPUw7dBVtFD99Dv2kn8URsc9PW9JBi_UPspdgQnj_3JyLUTeFDSyDc9lx8KfeGIwA3T0v3mrGm4FE_OSki6TEz0g0KeRjd4x3aKDizAn_laYSuwUC8qo"/>
-</div>
-<div class="md:col-span-4 order-1 md:order-2 space-y-6">
-<h3 class="font-headline-md text-headline-md text-primary">Fortificaciones de Niebla</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                        En la costa, donde el río Calle-Calle abraza el Océano Pacífico, se erigen imponentes los antiguos fuertes españoles. Testigos silenciosos de la historia colonial, ofrecen vistas panorámicas inigualables y un viaje al pasado defensivo de la región.
-                    </p>
-<button class="bg-transparent text-primary font-label-sm text-label-sm uppercase font-bold py-3 px-6 border border-primary tracking-widest hover:bg-surface-variant transition-colors duration-300">
-                        Descubrir Historia
-                    </button>
-</div>
-</article>
-</div>
-<!-- Call to Action Banner -->
-<div class="mt-section-gap bg-surface-variant border border-outline-variant p-12 text-center relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Su Viaje Comienza Aquí</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8">
-                Reserve su estadía y permítanos diseñar una experiencia a medida, combinando el lujo silencioso con la majestuosidad indómita del sur chileno.
+            <a href="#" class="place-link reveal reveal-delay-3">Conocer más</a>
+        </div>
+    </div>
+
+    <!-- Lugar 02 -->
+    <div class="place-strip reverse">
+        <div class="place-img-wrap">
+            <span class="place-number">02</span>
+            <img
+                    class="place-img"
+                    src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80&fit=crop"
+                    alt="Cervecería Kunstmann"
+            />
+        </div>
+        <div class="place-content">
+            <span class="place-tag reveal">Cultura · Gastronomía</span>
+            <h2 class="place-title reveal reveal-delay-1">Cervecería Kunstmann</h2>
+            <p class="place-desc reveal reveal-delay-2">
+                Emblema de la herencia alemana en Valdivia. Fundada en 1915,
+                la Cervecería Kunstmann ofrece tours por sus instalaciones donde
+                se puede descubrir el arte centenario de la elaboración artesanal
+                de cerveza. Su restaurante, en una hermosa casona bávara, sirve
+                platos típicos alemanes maridados con sus cervezas premiadas a nivel mundial.
             </p>
-<button class="bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold py-4 px-10 rounded-none tracking-widest hover:bg-primary-container transition-colors duration-300 inline-flex items-center gap-2">
-<span>PLANIFICAR VIAJE</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</main>
-<!-- Footer -->
-<footer class="bg-surface dark:bg-inverse-surface border-t border-outline-variant dark:border-outline w-full py-section-gap mt-auto">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
-<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed font-bold">
-                VALDIVIA
+            <a href="#" class="place-link reveal reveal-delay-3">Conocer más</a>
+        </div>
+    </div>
+
+    <!-- Lugar 03 -->
+    <div class="place-strip">
+        <div class="place-img-wrap">
+            <span class="place-number">03</span>
+            <img
+                    class="place-img"
+                    src="https://images.unsplash.com/photo-1467189386127-c4e5e31ee213?w=900&q=80&fit=crop"
+                    alt="Fuerte de Niebla"
+            />
+        </div>
+        <div class="place-content">
+            <span class="place-tag reveal">Historia · Patrimonio</span>
+            <h2 class="place-title reveal reveal-delay-1">Fuerte de Niebla</h2>
+            <p class="place-desc reveal reveal-delay-2">
+                Centinela de piedra a la entrada del río Valdivia, el Fuerte Niebla
+                es uno de los sistemas defensivos coloniales mejor conservados de América
+                del Sur. Sus cañones apuntan aún al horizonte del Pacífico, testigos
+                mudos de batallas que definieron el destino de una nación. Declarado
+                Monumento Nacional, es un paseo imprescindible con vistas panorámicas incomparables.
+            </p>
+            <a href="#" class="place-link reveal reveal-delay-3">Conocer más</a>
+        </div>
+    </div>
+
+    <!-- Lugar 04 -->
+    <div class="place-strip reverse">
+        <div class="place-img-wrap">
+            <span class="place-number">04</span>
+            <img
+                    class="place-img"
+                    src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=900&q=80&fit=crop"
+                    alt="Santuario Carlos Andwanter"
+            />
+        </div>
+        <div class="place-content">
+            <span class="place-tag reveal">Naturaleza · Ecoturismo</span>
+            <h2 class="place-title reveal reveal-delay-1">Santuario Río Cruces</h2>
+            <p class="place-desc reveal reveal-delay-2">
+                A solo minutos del centro, el Santuario de Naturaleza Carlos Andwanter
+                es uno de los humedales más importantes de Chile. Sus aguas tranquilas
+                albergan cisnes de cuello negro, nutrias de río y más de 100 especies
+                de aves. Los recorridos en bote al amanecer, cuando la niebla abraza
+                los totorales, son una experiencia de naturaleza absolutamente irrepetible.
+            </p>
+            <a href="#" class="place-link reveal reveal-delay-3">Conocer más</a>
+        </div>
+    </div>
+
+</div><!-- /#lugares -->
+
+<!-- ══════════════════ GALLERY ═════════════════════ -->
+<section id="gallery">
+    <div class="gallery-header">
+        <span class="section-label reveal">Galería Visual</span>
+        <h2 class="section-title reveal reveal-delay-1" style="font-size:clamp(2rem,4vw,3rem);margin-top:.6rem">
+            Valdivia a través<br>de la lente
+        </h2>
+    </div>
+    <div class="gallery-grid reveal">
+        <div class="gallery-item">
+            <img class="gallery-img"
+                 src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80&fit=crop"
+                 alt="Río Valdivia al atardecer" />
+            <div class="gallery-overlay"><span class="gallery-caption">Ríos al Atardecer</span></div>
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-img"
+                 src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80&fit=crop"
+                 alt="Bosque nativo valdiviano" />
+            <div class="gallery-overlay"><span class="gallery-caption">Bosque Valdiviano</span></div>
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-img"
+                 src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&q=80&fit=crop"
+                 alt="Arquitectura colonial Valdivia" />
+            <div class="gallery-overlay"><span class="gallery-caption">Arquitectura Colonial</span></div>
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-img"
+                 src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80&fit=crop"
+                 alt="Fauna del humedal" />
+            <div class="gallery-overlay"><span class="gallery-caption">Fauna Nativa</span></div>
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-img"
+                 src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80&fit=crop"
+                 alt="Vista nocturna ciudad" />
+            <div class="gallery-overlay"><span class="gallery-caption">Ciudad Nocturna</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ INFO ════════════════════════ -->
+<section id="info">
+    <div class="info-visual">
+        <img
+                class="info-img"
+                src="https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?w=900&q=80&fit=crop"
+                alt="Cultura valdiviana"
+        />
+        <div class="info-img-overlay"></div>
+    </div>
+    <div class="info-text">
+        <span class="section-label reveal">Descubrir la Ciudad</span>
+        <h2 class="section-title reveal reveal-delay-1" style="font-size:clamp(2rem,3.5vw,3rem);margin-top:.7rem;margin-bottom:1rem">
+            Todo lo que<br>necesitas saber
+        </h2>
+        <p class="section-body reveal reveal-delay-2" style="font-size:.9rem">
+            Valdivia es una ciudad para todas las estaciones. Su carácter lluvioso
+            la hace exuberante y verde, perfecta para quienes buscan autenticidad
+            y una conexión profunda con la naturaleza patagónica.
+        </p>
+        <div class="info-cards">
+            <div class="info-card reveal reveal-delay-1">
+                <span class="info-icon">🌧</span>
+                <div>
+                    <div class="info-card-title">Clima Templado Lluvioso</div>
+                    <div class="info-card-text">Entre 11°C y 18°C en verano. Las lluvias nutren sus bosques durante el invierno, creando paisajes de una belleza cinematográfica.</div>
+                </div>
             </div>
-<nav class="flex flex-wrap justify-center gap-6 font-body-md text-body-md">
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-200" href="#">Privacy</a>
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-200" href="#">Terms</a>
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-200" href="#">Contact</a>
-<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-200" href="#">Press</a>
-</nav>
-<div class="font-body-md text-body-md text-on-surface-variant dark:text-on-secondary-fixed-variant text-center md:text-right">
-                © 2024 Valdivia Monograph. Editorial Travel Chile.
+            <div class="info-card reveal reveal-delay-2">
+                <span class="info-icon">✈</span>
+                <div>
+                    <div class="info-card-title">Cómo Llegar</div>
+                    <div class="info-card-text">Aeropuerto Las Marías con vuelos directos desde Santiago (1h 30min). También accesible en bus desde Temuco, Puerto Montt y Santiago.</div>
+                </div>
             </div>
-</div>
+            <div class="info-card reveal" style="transition-delay:.36s">
+                <span class="info-icon">🏛</span>
+                <div>
+                    <div class="info-card-title">Herencia Cultural Alemana</div>
+                    <div class="info-card-text">La migración germana del siglo XIX dejó su impronta en la arquitectura, gastronomía y tradiciones que aún se celebran con orgullo hoy.</div>
+                </div>
+            </div>
+            <div class="info-card reveal" style="transition-delay:.48s">
+                <span class="info-icon">🎓</span>
+                <div>
+                    <div class="info-card-title">Ciudad Universitaria</div>
+                    <div class="info-card-text">Sede de la Universidad Austral de Chile, referente en ciencias ambientales y medicina veterinaria. Una ciudad joven y vibrante.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ CTA BAND ════════════════════ -->
+<section id="cta-band">
+    <img
+            id="cta-bg"
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80&fit=crop"
+            alt="Gastronomía valdiviana"
+    />
+    <div class="cta-inner">
+        <span class="section-label" style="color:#fb8684;display:block;margin-bottom:1rem">Gastronomía Local</span>
+        <h2 class="cta-title">Sabores que cuentan<br>historias de siglos</h2>
+        <p class="cta-sub">
+            Del kuchen de frambuesas a las ostras del Pacífico, del curanto a la olla
+            a los embutidos alemanes ahumados. Valdivia es un festín para todos los sentidos.
+        </p>
+        <a href="#" class="btn-primary" style="font-size:.82rem">Explorar Restaurantes</a>
+    </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════════ -->
+<footer id="footer">
+    <div class="footer-grid">
+        <!-- Brand -->
+        <div>
+            <div class="footer-brand-name">Valdivia</div>
+            <p class="footer-brand-desc">
+                La Perla del Sur espera por ti. Una ciudad donde cada rincón
+                guarda una historia y cada río refleja siglos de vida.
+            </p>
+            <div class="footer-social">
+                <a href="#" class="social-btn" aria-label="Instagram">✦</a>
+                <a href="#" class="social-btn" aria-label="Facebook">f</a>
+                <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
+                <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+            </div>
+        </div>
+
+        <!-- Explorar -->
+        <div>
+            <div class="footer-col-title">Explorar</div>
+            <ul class="footer-links">
+                <li><a href="#">Turismo</a></li>
+                <li><a href="#">Cultura</a></li>
+                <li><a href="#">Gastronomía</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Naturaleza</a></li>
+            </ul>
+        </div>
+
+        <!-- Visitar -->
+        <div>
+            <div class="footer-col-title">Planifica tu Viaje</div>
+            <ul class="footer-links">
+                <li><a href="#">Cómo llegar</a></li>
+                <li><a href="#">Alojamientos</a></li>
+                <li><a href="#">Eventos 2025</a></li>
+                <li><a href="#">Guías de viaje</a></li>
+                <li><a href="#">Clima y temporadas</a></li>
+            </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div>
+            <div class="footer-col-title">Información</div>
+            <ul class="footer-links">
+                <li><a href="#">Oficina de Turismo</a></li>
+                <li><a href="#">Prensa y Medios</a></li>
+                <li><a href="#">Municipalidad</a></li>
+                <li><a href="#">Mapa de la Ciudad</a></li>
+                <li><a href="#">Accesibilidad</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Valdivia, Región de Los Ríos, Chile. Todos los derechos reservados.</p>
+        <div class="footer-coord">
+            <span>39°49'S</span>
+            <span>73°14'O</span>
+            <span>Alt. 9 m.s.n.m.</span>
+        </div>
+    </div>
 </footer>
-</body></html>
+
+<!-- ══════════════════ SCRIPTS ══════════════════════ -->
+<script>
+    /* ── Theme toggle ────────────────────────────────── */
+    function toggleTheme() {
+        const html = document.documentElement;
+        const isDark = html.classList.contains('dark');
+        html.classList.toggle('dark',  !isDark);
+        html.classList.toggle('light',  isDark);
+        document.getElementById('themeIcon').textContent  = isDark ? '☀' : '☾';
+        document.getElementById('themeLabel').textContent = isDark ? 'Modo Claro' : 'Modo Oscuro';
+    }
+
+    /* ── Scroll reveal ───────────────────────────────── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    /* ── Navbar shrink on scroll ─────────────────────── */
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const s = window.scrollY;
+        navbar.style.opacity = s > 80 && s > lastScroll ? '0' : '1';
+        navbar.style.transform = s > 80 && s > lastScroll ? 'translateY(-100%)' : 'translateY(0)';
+        lastScroll = s;
+    });
+    navbar.style.transition = 'opacity .4s ease, transform .4s ease, background .4s, box-shadow .4s';
+</script>
+</body>
+</html>
