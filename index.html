@@ -25,54 +25,13 @@
         <a href="#" class="nav-logo">Valdivia</a>
         <!-- Col 3 derecha: Bandera SVG de Valdivia -->
         <div class="nav-flag" title="Escudo de Valdivia">
-            <!-- Bandera / Escudo heráldico de Valdivia -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 64" role="img" aria-label="Bandera de Valdivia">
-                <!-- Escudo con forma clásica -->
-                <defs>
-                    <clipPath id="shield-clip">
-                        <path d="M2,2 H52 V40 Q52,62 27,62 Q2,62 2,40 Z"/>
-                    </clipPath>
-                    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#f5d060"/>
-                        <stop offset="100%" stop-color="#c8922a"/>
-                    </linearGradient>
-                    <linearGradient id="blueGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#1a4a8a"/>
-                        <stop offset="100%" stop-color="#0e2f5e"/>
-                    </linearGradient>
-                </defs>
-                <!-- Borde dorado del escudo -->
-                <path d="M27,63 Q1,63 1,40 V1 H53 V40 Q53,63 27,63 Z" fill="url(#goldGrad)"/>
-                <!-- Cuerpo del escudo — mitad superior azul / mitad inferior roja -->
-                <g clip-path="url(#shield-clip)">
-                    <!-- Fondo azul superior -->
-                    <rect x="2" y="2" width="50" height="32" fill="url(#blueGrad)"/>
-                    <!-- Fondo rojo inferior -->
-                    <rect x="2" y="34" width="50" height="30" fill="#c0180e"/>
-                    <!-- Línea divisoria dorada -->
-                    <rect x="2" y="33" width="50" height="2" fill="#f5d060"/>
-                    <!-- Torre / Castillo central (símbolo de Valdivia) -->
-                    <rect x="21" y="7"  width="12" height="10" fill="#f5d060"/>
-                    <rect x="19" y="14" width="16" height="12" fill="#f5d060"/>
-                    <!-- Ventanas torre -->
-                    <rect x="24" y="9"  width="3" height="3" fill="#0e2f5e"/>
-                    <rect x="29" y="9"  width="3" height="3" fill="#0e2f5e"/>
-                    <rect x="23" y="16" width="4" height="5" fill="#0e2f5e"/>
-                    <rect x="30" y="16" width="4" height="5" fill="#0e2f5e"/>
-                    <!-- Almenas -->
-                    <rect x="19" y="5"  width="3" height="4" fill="#f5d060"/>
-                    <rect x="23" y="5"  width="3" height="4" fill="#f5d060"/>
-                    <rect x="27" y="5"  width="3" height="4" fill="#f5d060"/>
-                    <rect x="31" y="5"  width="3" height="4" fill="#f5d060"/>
-                    <!-- Olas del río (zona roja inferior) -->
-                    <path d="M5,42 Q10,38 15,42 Q20,46 25,42 Q30,38 35,42 Q40,46 45,42 Q48,40 50,42" stroke="#f5d060" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                    <path d="M5,48 Q10,44 15,48 Q20,52 25,48 Q30,44 35,48 Q40,52 45,48 Q48,46 50,48" stroke="#f5d060" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                    <!-- Estrella de 5 puntas (símbolo regional) -->
-                    <polygon points="27,56 28.5,61 33,61 29.5,63.5 31,68 27,65.5 23,68 24.5,63.5 21,61 25.5,61" fill="#f5d060" transform="translate(0,-12) scale(0.7) translate(11.6,17)"/>
-                </g>
-                <!-- Borde exterior del escudo -->
-                <path d="M27,63 Q1,63 1,40 V1 H53 V40 Q53,63 27,63 Z" fill="none" stroke="#f5d060" stroke-width="1.5"/>
-            </svg>
+            <div class="group relative overflow-hidden rounded-sm p-[2px] border border-neutral-500/20 dark:border-white/10 bg-white/[0.02] backdrop-blur-[2px] transition-all duration-300 hover:bg-white/[0.05] hover:border-neutral-500/40 dark:hover:border-white/20">
+                <img
+                        src="./static/img/bandera_valdivia.svg"
+                        alt="Bandera de Valdivia"
+                        class="w-10 h-auto object-contain rounded-[1px] transition-all duration-300 contrast-[1.02] group-hover:contrast-[1.05]"
+                />
+            </div>
         </div>
     </div>
     <nav class="nav-links">

@@ -32,9 +32,9 @@ export default {
         italic:  ['"Cormorant Garamond"', 'Georgia', 'serif'],
       },
       animation: {
-        'fade-up':   'fadeUp 0.9s ease forwards',
-        'fade-in':   'fadeIn 1.2s ease forwards',
-        'slide-left':'slideLeft 0.8s ease forwards',
+        'fade-up':    'fadeUp 0.9s ease forwards',
+        'fade-in':    'fadeIn 1.2s ease forwards',
+        'slide-left': 'slideLeft 0.8s ease forwards',
       },
       keyframes: {
         fadeUp:    { '0%': { opacity: '0', transform: 'translateY(32px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
