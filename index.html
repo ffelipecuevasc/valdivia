@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Valdivia — La Perla del Sur</title>
     <link rel="stylesheet" href="./static/css/output.css" type="text/css">
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+          rel="stylesheet"/>
 </head>
 
 <body>
@@ -19,28 +20,25 @@
         <!-- Col 1 izquierda: Theme toggle -->
         <button id="themeBtn" onclick="toggleTheme()" aria-label="Cambiar tema">
             <span id="themeIcon">☀</span>
-            <span id="themeLabel">Modo Claro</span>
+            <span id="themeLabel">Apariencia</span>
         </button>
         <!-- Col 2 centro: Logo -->
-        <a href="#" class="nav-logo">
-            <span class="nav-logo-shine">Valdivia</span>
+        <a href="#intro" class="nav-logo">
+            <span class="nav-logo-shine" data-text="Valdivia">Valdivia</span>
         </a>
         <!-- Col 3 derecha: Bandera SVG de Valdivia -->
-        <div class="nav-flag" title="Escudo de Valdivia">
-            <img
-                    src="./static/img/bandera_valdivia.svg"
-                    alt="Bandera de Valdivia"
-                    class="nav-shield"
-            />
+        <div class="nav-flag" title="Bandera de Valdivia">
+            <!-- Cambiamos el <img> por un <span> para usarlo como máscara -->
+            <span class="nav-shield"></span>
         </div>
     </div>
     <nav class="nav-links">
-        <a href="#intro"   class="nav-link">Inicio</a>
+        <a href="#intro" class="nav-link">Inicio</a>
         <a href="#lugares" class="nav-link">Turismo</a>
         <a href="#gallery" class="nav-link">Galería</a>
-        <a href="#info"    class="nav-link">Cultura</a>
-        <a href="#cta-band"class="nav-link">Gastronomía</a>
-        <a href="#footer"  class="nav-link">Contacto</a>
+        <a href="#info" class="nav-link">Cultura</a>
+        <a href="#cta-band" class="nav-link">Gastronomía</a>
+        <a href="#footer" class="nav-link">Contacto</a>
     </nav>
 </nav>
 
@@ -48,27 +46,29 @@
 <section id="hero">
     <img
             id="hero-img"
-            src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=85&fit=crop"
+            src="./static/img/principal/Valdivia.jpg"
             alt="Vista aérea de Valdivia, Chile"
             loading="eager"
     />
     <div class="hero-content">
         <span class="hero-eyebrow">Región de Los Ríos · Chile</span>
-        <h1 class="hero-title">La <span>Perla</span> del Sur</h1>
+        <!-- H1 con entrada en cascada palabra por palabra -->
+        <h1 class="hero-title">
+            <span class="stagger-word delay-1">La</span>
+            <span class="stagger-word delay-2 highlight">Perla</span>
+            <span class="stagger-word delay-3">del</span>
+            <span class="stagger-word delay-4">Sur</span>
+        </h1>
         <p class="hero-slogan">Valdivia</p>
         <div class="hero-divider"></div>
         <p class="hero-subtitle">
-            Donde los ríos abrazan la historia, la naturaleza susurra entre los bosques
-            y la cultura florecía desde los confines del mundo.
+            La capital cervecera y fluvial de Chile. Una ciudad forjada por la lluvia, protegida por castillos de piedra
+            y con siglos de historia entre la Selva Valdiviana y el Océano Pacífico.
         </p>
         <div class="hero-cta">
             <a href="#lugares" class="btn-primary">Explorar Ciudad</a>
             <a href="#gallery" class="btn-outline">Ver Galería</a>
         </div>
-    </div>
-    <div class="scroll-hint">
-        <span>Descubrir</span>
-        <div class="scroll-arrow"></div>
     </div>
 </section>
 
@@ -81,7 +81,8 @@
             guardando siglos de historia entre sus calles empedradas."
         </p>
         <div class="red-line reveal reveal-delay-2"></div>
-        <p style="font-size:.95rem;line-height:1.85;font-weight:300;max-width:640px;margin:0 auto" class="reveal reveal-delay-3 section-body">
+        <p style="font-size:.95rem;line-height:1.85;font-weight:300;max-width:640px;margin:0 auto"
+           class="reveal reveal-delay-3 section-body">
             Valdivia, fundada en 1552 por Pedro de Valdivia en el corazón de la Región de Los Ríos,
             es una de las ciudades más bellas y singulares de Chile. Rodeada por los ríos Calle-Calle,
             Cruces y Valdivia, su herencia alemana, su arquitectura centenaria y su exuberante naturaleza
@@ -227,31 +228,31 @@
         <div class="gallery-item">
             <img class="gallery-img"
                  src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80&fit=crop"
-                 alt="Río Valdivia al atardecer" />
+                 alt="Río Valdivia al atardecer"/>
             <div class="gallery-overlay"><span class="gallery-caption">Ríos al Atardecer</span></div>
         </div>
         <div class="gallery-item">
             <img class="gallery-img"
                  src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80&fit=crop"
-                 alt="Bosque nativo valdiviano" />
+                 alt="Bosque nativo valdiviano"/>
             <div class="gallery-overlay"><span class="gallery-caption">Bosque Valdiviano</span></div>
         </div>
         <div class="gallery-item">
             <img class="gallery-img"
                  src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&q=80&fit=crop"
-                 alt="Arquitectura colonial Valdivia" />
+                 alt="Arquitectura colonial Valdivia"/>
             <div class="gallery-overlay"><span class="gallery-caption">Arquitectura Colonial</span></div>
         </div>
         <div class="gallery-item">
             <img class="gallery-img"
                  src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80&fit=crop"
-                 alt="Fauna del humedal" />
+                 alt="Fauna del humedal"/>
             <div class="gallery-overlay"><span class="gallery-caption">Fauna Nativa</span></div>
         </div>
         <div class="gallery-item">
             <img class="gallery-img"
                  src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80&fit=crop"
-                 alt="Vista nocturna ciudad" />
+                 alt="Vista nocturna ciudad"/>
             <div class="gallery-overlay"><span class="gallery-caption">Ciudad Nocturna</span></div>
         </div>
     </div>
@@ -269,7 +270,8 @@
     </div>
     <div class="info-text">
         <span class="section-label reveal">Descubrir la Ciudad</span>
-        <h2 class="section-title reveal reveal-delay-1" style="font-size:clamp(2rem,3.5vw,3rem);margin-top:.7rem;margin-bottom:1rem">
+        <h2 class="section-title reveal reveal-delay-1"
+            style="font-size:clamp(2rem,3.5vw,3rem);margin-top:.7rem;margin-bottom:1rem">
             Todo lo que<br>necesitas saber
         </h2>
         <p class="section-body reveal reveal-delay-2" style="font-size:.9rem">
@@ -282,28 +284,36 @@
                 <span class="info-icon">🌧</span>
                 <div>
                     <div class="info-card-title">Clima Templado Lluvioso</div>
-                    <div class="info-card-text">Entre 11°C y 18°C en verano. Las lluvias nutren sus bosques durante el invierno, creando paisajes de una belleza cinematográfica.</div>
+                    <div class="info-card-text">Entre 11°C y 18°C en verano. Las lluvias nutren sus bosques durante el
+                        invierno, creando paisajes de una belleza cinematográfica.
+                    </div>
                 </div>
             </div>
             <div class="info-card reveal reveal-delay-2">
                 <span class="info-icon">✈</span>
                 <div>
                     <div class="info-card-title">Cómo Llegar</div>
-                    <div class="info-card-text">Aeropuerto Las Marías con vuelos directos desde Santiago (1h 30min). También accesible en bus desde Temuco, Puerto Montt y Santiago.</div>
+                    <div class="info-card-text">Aeropuerto Las Marías con vuelos directos desde Santiago (1h 30min).
+                        También accesible en bus desde Temuco, Puerto Montt y Santiago.
+                    </div>
                 </div>
             </div>
             <div class="info-card reveal" style="transition-delay:.36s">
                 <span class="info-icon">🏛</span>
                 <div>
                     <div class="info-card-title">Herencia Cultural Alemana</div>
-                    <div class="info-card-text">La migración germana del siglo XIX dejó su impronta en la arquitectura, gastronomía y tradiciones que aún se celebran con orgullo hoy.</div>
+                    <div class="info-card-text">La migración germana del siglo XIX dejó su impronta en la arquitectura,
+                        gastronomía y tradiciones que aún se celebran con orgullo hoy.
+                    </div>
                 </div>
             </div>
             <div class="info-card reveal" style="transition-delay:.48s">
                 <span class="info-icon">🎓</span>
                 <div>
                     <div class="info-card-title">Ciudad Universitaria</div>
-                    <div class="info-card-text">Sede de la Universidad Austral de Chile, referente en ciencias ambientales y medicina veterinaria. Una ciudad joven y vibrante.</div>
+                    <div class="info-card-text">Sede de la Universidad Austral de Chile, referente en ciencias
+                        ambientales y medicina veterinaria. Una ciudad joven y vibrante.
+                    </div>
                 </div>
             </div>
         </div>
@@ -399,17 +409,20 @@
     function toggleTheme() {
         const html = document.documentElement;
         const isDark = html.classList.contains('dark');
-        html.classList.toggle('dark',  !isDark);
-        html.classList.toggle('light',  isDark);
-        document.getElementById('themeIcon').textContent  = isDark ? '☀' : '☾';
-        document.getElementById('themeLabel').textContent = isDark ? 'Modo Claro' : 'Modo Oscuro';
+        html.classList.toggle('dark', !isDark);
+        html.classList.toggle('light', isDark);
+        document.getElementById('themeIcon').textContent = isDark ? '☀' : '☾';
     }
 
     /* ── Scroll reveal ───────────────────────────────── */
     const revealEls = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.12 });
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+            }
+        });
+    }, {threshold: 0.12});
     revealEls.forEach(el => io.observe(el));
 
     /* ── Navbar shrink on scroll ─────────────────────── */
@@ -427,6 +440,7 @@
     function syncNavHeight() {
         document.documentElement.style.setProperty('--nav-h', navbar.offsetHeight + 16 + 'px');
     }
+
     syncNavHeight();
     window.addEventListener('resize', syncNavHeight);
 </script>

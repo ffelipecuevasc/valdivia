@@ -33,46 +33,126 @@
         align-items: center; padding: .75rem 2.5rem;
     }
 
+    /* ── Navbar Efecto Brillo Contínuo ────────────────── */
+
     .nav-logo {
-        font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700;
-        letter-spacing: .22em; text-transform: uppercase; text-align: center; text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
     }
 
+    /* 1. EL TEXTO BASE (Capa física) */
     .nav-logo-shine {
-        display: inline-block; /* clave: evita el bug de letras "cortadas" con letter-spacing */
+        position: relative;
+        display: inline-block;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: .22em;
+        text-transform: uppercase;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    /* Colores estáticos base (Sin animaciones, esto evita que la palabra se corte) */
+    html.dark .nav-logo-shine {
+        color: #fcadab;
+    }
+    html.light .nav-logo-shine {
+        color: #740d07;
+        /* Doble capa de sombra: una muy sutil para el contorno y otra difusa
+           para darle un efecto 3D de despegue sobre el fondo claro */
+        text-shadow: 0 1px 2px rgba(116, 13, 7, 0.25),
+        0 4px 16px rgba(116, 13, 7, 0.15);
+    }
+
+    /* 2. EL CLON FANTASMA ANIMADO (Capa visual) */
+    .nav-logo-shine::after {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        letter-spacing: inherit;
+
         background-repeat: no-repeat;
-        background-size: 250% auto;
+        background-size: 200% auto;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
-        animation: navLogoShine 3s linear infinite;
-        will-change: background-position;
-    }
-    html.dark .nav-logo-shine {
-        background-image: linear-gradient(100deg,
-        #feeded 0%, #feeded 40%, #ffffff 50%, #feeded 60%, #feeded 100%);
-    }
-    html.light .nav-logo-shine {
-        background-image: linear-gradient(100deg,
-        #740d07 0%, #740d07 40%, #f1261a 50%, #740d07 60%, #740d07 100%);
+
+        pointer-events: none;
+        /* Ampliamos de 3s a 5s y usamos ease-in-out para un barrido más elegante */
+        animation: navLogoShine 5s ease-in-out infinite;
     }
 
+    /* 3. LOS GRADIENTES DE BRILLO (Optimizados)
+       Nota Front-End Senior: Usamos 'transparent' a los lados para que el
+       color del texto base se vea a través, haciendo el barrido impecable */
+    html.dark .nav-logo-shine::after {
+        background-image: linear-gradient(
+                110deg,
+                transparent 0%,
+                transparent 42%,
+                #ffffff 50%, /* Brillo blanco puro */
+                transparent 58%,
+                transparent 100%
+        );
+        /* Un leve resplandor para potenciar la visibilidad del blanco en la oscuridad */
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+    }
+
+    html.light .nav-logo-shine::after {
+        background-image: linear-gradient(
+                110deg,
+                transparent 0%,
+                transparent 42%,
+                rgba(255, 255, 255, 0.9) 50%,
+                transparent 58%,
+                transparent 100%
+        );
+    }
+
+    /* 4. ANIMACIÓN FLUIDA */
     @keyframes navLogoShine {
         0%   { background-position: 200% center; }
-        55%  { background-position: -50% center; }
-        100% { background-position: -50% center; } /* pausa ~1.3s antes de reiniciar */
+        /* El barrido toma ahora 2.5 segundos (el 50% de 5s), logrando tu objetivo de ir más lento */
+        50%  { background-position: -50% center; }
+        /* Descansa los otros 2.5 segundos antes de repetir */
+        100% { background-position: -50% center; }
     }
 
     .nav-flag { display: flex; justify-content: flex-end; align-items: center; }
+
     .nav-shield {
-        height: 38px; width: auto;
-        filter: drop-shadow(0 1px 3px rgba(0,0,0,.45));
-        transition: transform .3s ease, filter .3s ease;
+        display: inline-block;
+        /* Reducción del 20%: pasamos de 38px a 30px */
+        height: 30px;
+        /* Al ser un span, necesita un ancho explícito.
+           Si la bandera no es perfectamente cuadrada, ajusta este 30px (ej: 35px) */
+        width: 30px;
+
+        /* 1. Usamos el SVG como plantilla de recorte */
+        -webkit-mask: url('../img/bandera_valdivia.svg') no-repeat center / contain;
+        mask: url('../img/bandera_valdivia.svg') no-repeat center / contain;
+
+        /* 2. Quitamos todas las transiciones de escala y sombras */
+        transition: background-color .4s;
     }
-    .nav-shield:hover {
-        transform: scale(1.08);
-        filter: drop-shadow(0 2px 10px rgba(213,43,30,.55));
+
+    /* 3. Lógica de Colores: El background-color rellenará la forma del SVG */
+
+    /* En Modo Oscuro: La bandera se pinta de Blanco puro */
+    html.dark .nav-shield {
+        background-color: #fdd4d4;
+    }
+
+    /* En Modo Claro: La bandera se pinta del color burdeos que solicitaste */
+    html.light .nav-shield {
+        background-color: #740d07;
     }
 
     #themeBtn {
@@ -87,9 +167,15 @@
     #themeBtn:hover { background: rgba(241,38,26,.18); }
 
     .nav-links {
-        display: flex; align-items: center; justify-content: center; gap: .25rem;
-        width: fit-content; margin: .5rem auto 1.1rem; padding: .4rem;
-        border-radius: 999px; transition: background .4s, border-color .4s, box-shadow .4s;
+        display: flex;
+        align-items: stretch; /* Estira los enlaces para que llenen todo el alto */
+        justify-content: center;
+        /* Eliminamos el 'gap' y el 'padding' para que los enlaces se toquen */
+        width: fit-content;
+        margin: .5rem auto 1.1rem;
+        border-radius: 999px; /* Mantiene la forma de píldora global */
+        overflow: hidden; /* LA MAGIA: Recorta los enlaces cuadrados en los extremos curvos */
+        transition: background .4s, border-color .4s, box-shadow .4s;
     }
     html.dark .nav-links {
         background: rgba(244,38,26,.06);
@@ -103,25 +189,46 @@
     }
 
     .nav-link {
-        display: inline-flex; align-items: center; justify-content: center; text-align: center;
-        line-height: 1; white-space: nowrap;
-        font-size: .78rem; font-weight: 400; letter-spacing: .1em; text-transform: uppercase;
-        padding: .6rem 1.1rem; border-radius: 999px; text-decoration: none;
-        transition: color .3s, background-color .3s, transform .2s, box-shadow .3s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 1;
+        white-space: nowrap;
+        font-size: .78rem;
+        font-weight: 400;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+
+        /* EL TRUCO SENIOR: Sumamos +0.1em al padding izquierdo para anular el
+           espacio vacío que el letter-spacing deja a la derecha. Centrado perfecto. */
+        padding: 1rem 1.4rem 1rem calc(1.4rem + 0.1em);
+
+        border-radius: 0;
+        text-decoration: none;
+        transition: color .3s, background-color .3s;
     }
+
     html.dark .nav-link { color: #fcadab; }
     html.light .nav-link { color: #740d07; }
 
+    /* Efectos al pasar el mouse (Hover) */
     .nav-link:hover {
-        color: #feeded; background-color: #f1261a;
-        transform: translateY(-1px); box-shadow: 0 4px 14px rgba(241,38,26,.4);
+        color: #feeded;
+        background-color: #f1261a;
     }
+
+    /* Efectos de accesibilidad con teclado (Focus) */
     .nav-link:focus-visible {
-        outline: none; color: #feeded; background-color: #d01f15;
-        box-shadow: 0 0 0 3px rgba(241,38,26,.35);
+        outline: none;
+        color: #feeded;
+        background-color: #d01f15;
     }
+
+    /* Efecto al hacer clic (Active) */
     .nav-link:active {
-        transform: translateY(0) scale(.96); background-color: #a4160e; color: #feeded;
+        background-color: #a4160e;
+        color: #feeded;
     }
 
     /* ── Hero ────────────────────────────────────────── */
@@ -150,13 +257,46 @@
         letter-spacing: .35em; text-transform: uppercase; color: #fb8684; margin-bottom: 1.5rem;
         animation: fadeUp .8s ease .3s both;
     }
+    /* === H1 MATE CON EFECTO DE CASCADA === */
     .hero-title {
-        font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 900; line-height: 1.1;
-        color: #feeded; text-shadow: 0 4px 60px rgba(241,38,26,.45), 0 2px 8px rgba(0,0,0,.6);
-        animation: fadeUp .9s ease .5s both;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 0.28em; /* Espaciado perfecto y natural entre palabras */
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3rem, 7vw, 6.5rem);
+        font-weight: 900;
+        line-height: 1.1;
+        color: #feeded;
+        /* Eliminamos el resplandor rojo. Solo dejamos una sombra negra súper sutil
+           para que la letra blanca no se pierda si el fondo es claro. 100% Mate. */
+        text-shadow: 0 4px 12px rgba(0,0,0,.7);
         padding-top: 0.2em;
     }
-    .hero-title span { color: #f1261a; }
+
+    .stagger-word {
+        display: inline-block;
+        opacity: 0; /* Inicia invisible */
+        transform: translateY(40px); /* Inicia más abajo */
+        /* Usamos una curva de velocidad premium (frena suavemente al llegar arriba) */
+        animation: staggerFade 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    /* Le devolvemos su color a la palabra central */
+    .stagger-word.highlight {
+        color: #f1261a;
+    }
+
+    /* Tiempos de disparo milimétricos (150ms de diferencia entre cada una) */
+    .delay-1 { animation-delay: 0.45s; }
+    .delay-2 { animation-delay: 0.60s; }
+    .delay-3 { animation-delay: 0.75s; }
+    .delay-4 { animation-delay: 0.90s; }
+
+    @keyframes staggerFade {
+        0% { opacity: 0; transform: translateY(40px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
     .hero-slogan {
         font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 3.5vw, 2.2rem); font-style: italic; font-weight: 300;
         color: #fdd4d4; letter-spacing: .05em; margin-top: 1.2rem; animation: fadeUp .9s ease .75s both;
@@ -391,6 +531,12 @@
         .hero-title { font-size: clamp(3.5rem, 18vw, 6rem); }
         .footer-grid { grid-template-columns: 1fr; }
         .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    /* Fallback para accesibilidad de animación */
+    @media (prefers-reduced-motion: reduce) {
+        .hero-eyebrow, .hero-title, .stagger-word, .hero-slogan, .hero-divider, .hero-subtitle, .hero-cta, .scroll-hint {
+            animation: none !important; opacity: 1 !important; transform: none !important;
+        }
     }
 }
 
