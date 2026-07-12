@@ -22,16 +22,16 @@
             <span id="themeLabel">Modo Claro</span>
         </button>
         <!-- Col 2 centro: Logo -->
-        <a href="#" class="nav-logo">Valdivia</a>
+        <a href="#" class="nav-logo">
+            <span class="nav-logo-shine">Valdivia</span>
+        </a>
         <!-- Col 3 derecha: Bandera SVG de Valdivia -->
         <div class="nav-flag" title="Escudo de Valdivia">
-            <div class="group relative overflow-hidden rounded-sm p-[2px] border border-neutral-500/20 dark:border-white/10 bg-white/[0.02] backdrop-blur-[2px] transition-all duration-300 hover:bg-white/[0.05] hover:border-neutral-500/40 dark:hover:border-white/20">
-                <img
-                        src="./static/img/bandera_valdivia.svg"
-                        alt="Bandera de Valdivia"
-                        class="w-10 h-auto object-contain rounded-[1px] transition-all duration-300 contrast-[1.02] group-hover:contrast-[1.05]"
-                />
-            </div>
+            <img
+                    src="./static/img/bandera_valdivia.svg"
+                    alt="Bandera de Valdivia"
+                    class="nav-shield"
+            />
         </div>
     </div>
     <nav class="nav-links">
@@ -422,6 +422,13 @@
         lastScroll = s;
     });
     navbar.style.transition = 'opacity .4s ease, transform .4s ease, background .4s, box-shadow .4s';
+
+    /* ── Altura real del navbar → variable CSS para el hero ── */
+    function syncNavHeight() {
+        document.documentElement.style.setProperty('--nav-h', navbar.offsetHeight + 16 + 'px');
+    }
+    syncNavHeight();
+    window.addEventListener('resize', syncNavHeight);
 </script>
 </body>
 </html>
